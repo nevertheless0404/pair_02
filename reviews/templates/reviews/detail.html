@@ -4,24 +4,26 @@
 {% bootstrap_javascript %}
 
 {% block body %}
-  <div class="mt-5">
-    <h3>리뷰 제목 :
-      {{review.title}}</h3>
-    <hr>
-    <div class='d-flex'>
-      <p class="me-5">영화 이름 :
-        {{review.movie_name}}</p>
-      <p class="ms-5">영화 평점 :
+  <div class="mt-5 p-3 border border-3 border-warning rounded">
+    <div class='d-flex justify-content-between'>
+      <h3 class="">영화 이름 :
+        {{review.movie_name}}</h3>
+      <p class="">영화 평점 :
         {{review.grade}}</p>
     </div>
+    <hr>
+    <p>리뷰 제목 :
+      {{review.title}}</p>
     리뷰 내용<p style="color:gray;">
       <br>
       {{review.content}}</p>
-    <a type='button' href="{%url 'reviews:update' review.pk %}">
-      수정
-    </a>
-    <a type='button' href="{%url 'reviews:delete' review.pk %}">
-      삭제
-    </a>
+    <div class="d-flex justify-content-end">
+      <a type="button" href="{%url 'reviews:update' review.pk %}" class="btn btn-outline-warning me-3">
+        수정
+      </a>
+      <a type='button' href="{%url 'reviews:delete' review.pk %}" class="btn btn-outline-warning">
+        삭제
+      </a>
+    </div>
   </div>
 {% endblock %}
