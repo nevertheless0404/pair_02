@@ -1,0 +1,22 @@
+{% extends 'base.html' %}
+
+{% block body %}
+  <table class="table">
+    <thead>
+      <tr>
+        <th scope="col">#</th>
+        <th scope="col">제목</th>
+      </tr>
+    </thead>
+    <tbody>
+      {% for review in reviews %}
+        <tr>
+          <th scope="row">{{review.id}}</th>
+          <td>
+            <a href="{%url 'reviews:detail' review.pk%}">{{review.title}}</a>
+          </td>
+        </tr>
+      {% endfor %}
+    </tbody>
+  </table>
+{% endblock %}

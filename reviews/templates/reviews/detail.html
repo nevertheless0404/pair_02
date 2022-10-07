@@ -1,0 +1,19 @@
+{% extends 'base.html' %}
+{% load django_bootstrap5%}
+{% bootstrap_css %}
+{% bootstrap_javascript %}
+
+{% block body %}
+  <div>
+    <h3>{{review.title}}</h3>
+    <p>{{review.movie_name}}</p>
+    <p>{{review.grade}}</p>
+    <p>{{review.content}}</p>
+    <a type='button' href="{%url 'reviews:update' review.pk %}">
+      수정
+    </a>
+    <a type='button' href="{%url 'reviews:delete' review.pk %}">
+      삭제
+    </a>
+  </div>
+{% endblock %}
