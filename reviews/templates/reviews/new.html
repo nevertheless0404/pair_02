@@ -7,6 +7,6 @@
   <form class="mt-5" action="{% url 'reviews:create'%}" method="POST">
     {% csrf_token %}
     {% bootstrap_form review_form %}
-    <input type="submit" value='추가'>
+    <input type="button" class="btn btn-outline-warning" value='추가'>
   </form>
 {% endblock %}

@@ -7,6 +7,6 @@
   <form action="" class="mt-5" method='POST'>
     {% csrf_token %}
     {% bootstrap_form review_form%}
-    <input type='submit' value='수정'></input>
+    <input type='button' class="btn btn-outline-warning" value='수정'></input>
   </form>
 {% endblock %}
