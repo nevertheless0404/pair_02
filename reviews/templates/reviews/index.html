@@ -1,20 +1,24 @@
 {% extends 'base.html' %}
 
 {% block body %}
-  <table class="table">
+  <table class="table mt-5">
     <thead>
       <tr>
         <th scope="col">#</th>
         <th scope="col">제목</th>
+        <th scope="col">리뷰 생성시간</th>
+        <th scope="col">리뷰 수정시간</th>
       </tr>
     </thead>
     <tbody>
       {% for review in reviews %}
         <tr>
-          <th scope="row">{{review.id}}</th>
+          <th scope="row">{{review.num}}</th>
           <td>
             <a href="{%url 'reviews:detail' review.pk%}">{{review.title}}</a>
           </td>
+          <td>{{review.created_at}}</td>
+          <td>{{review.updated_at}}</td>
         </tr>
       {% endfor %}
     </tbody>

@@ -4,11 +4,19 @@
 {% bootstrap_javascript %}
 
 {% block body %}
-  <div>
-    <h3>{{review.title}}</h3>
-    <p>{{review.movie_name}}</p>
-    <p>{{review.grade}}</p>
-    <p>{{review.content}}</p>
+  <div class="mt-5">
+    <h3>리뷰 제목 :
+      {{review.title}}</h3>
+    <hr>
+    <div class='d-flex'>
+      <p class="me-5">영화 이름 :
+        {{review.movie_name}}</p>
+      <p class="ms-5">영화 평점 :
+        {{review.grade}}</p>
+    </div>
+    리뷰 내용<p style="color:gray;">
+      <br>
+      {{review.content}}</p>
     <a type='button' href="{%url 'reviews:update' review.pk %}">
       수정
     </a>

@@ -4,7 +4,7 @@
 {% bootstrap_javascript %}
 
 {% block body %}
-  <form action="{% url 'reviews:create'%}" method="POST">
+  <form class="mt-5" action="{% url 'reviews:create'%}" method="POST">
     {% csrf_token %}
     {% bootstrap_form review_form %}
     <input type="submit" value='추가'>

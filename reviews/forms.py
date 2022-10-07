@@ -10,3 +10,9 @@ class ReviewForm(forms.ModelForm):
             'movie_name',
             'grade',
         ]
+        labels = {
+            'title' : '리뷰 제목',
+            'content' : '리뷰 내용',
+            'movie_name' : '영화 이름',
+            'grade' : '영화 평점',
+        }

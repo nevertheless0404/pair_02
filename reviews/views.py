@@ -4,8 +4,13 @@ from .forms import ReviewForm
 # Create your views here.
 def index(request):
     reviews = Review.objects.all().order_by('-pk')
+    cnt = 1
+    reviews_list = []
+    for i in reviews:
+        reviews_list.append({'num': cnt, 'title': i.title, 'pk':i.id, 'created_at': i.created_at, 'updated_at':i.updated_at})
+        cnt += 1
     context = {
-        'reviews': reviews,
+        'reviews': reviews_list,
     }
     return render(request, 'reviews/index.html', context)
 
