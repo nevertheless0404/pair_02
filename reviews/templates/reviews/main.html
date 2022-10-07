@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    {% load static %}
+    <link rel="stylesheet" type="text/css" href="{% static 'bootstrap.min.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'CSS/mainstyle.css' %}">
+  </head>
+
+  <body>
+    <div class="slider">
+      <div class="rotator">
+        <div class="items">
+          <div class="img_items">
+            <img src="{% static 'images/main_1.jpg' %}" alt="items photo"/>
+            <a href="{% url 'reviews:index' %}">
+              <button type="button" class="img_btn btn btn-dark">상세보기</button>
+            </a>
+          </div>
+        </div>
+        <div class="items">
+          <img src="{% static 'images/main_2.jpg' %}"/>
+          <a href="{% url 'reviews:index' %}">
+            <button type="button" class="img_btn btn btn-dark">상세보기</button>
+          </a>
+        </div>
+        <div class="items">
+          <img src="{% static 'images/main_3.jpg' %}" alt="items photo"/>
+          <a href="{% url 'reviews:index' %}">
+            <button type="button" class="img_btn btn btn-dark">상세보기</button>
+          </a>
+        </div>
+        <div class="items">
+          <img src="{% static 'images/main_4.jpg' %}" alt="items photo"/>
+          <a href="{% url 'reviews:index' %}">
+            <button type="button" class="img_btn btn btn-dark">상세보기</button>
+          </a>
+        </div>
+        <div class="items">
+          <img src="{% static 'images/main_5.png' %}"/>
+          <a href="{% url 'reviews:index' %}">
+            <button type="button" class="img_btn btn btn-dark">상세보기</button>
+          </a>
+        </div>
+        <div class="items">
+          <img src="{% static 'images/main_6.jpg' %}" alt="items photo"/>
+          <a href="{% url 'reviews:index' %}">
+            <button type="button" class="img_btn btn btn-dark">상세보기</button>
+          </a>
+        </div>
+      </div>
+    </body>
+
+  </html>

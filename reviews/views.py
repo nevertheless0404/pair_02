@@ -5,6 +5,9 @@ from .forms import ReviewForm
 from django.db.models import Q
 
 # Create your views here.
+def main(request):
+    return render(request, "reviews/main.html")
+
 def index(request):
     reviews = Review.objects.all().order_by("-pk")
     cnt = 1
@@ -80,4 +83,13 @@ def search(request):
                 | Q(content__icontains=search)
                 | Q(movie_name__icontains=search)
             )
-            return render(request, "reviews/search.html", {"search": search_list})
+            context = {
+                "search" : search_list
+            }
+            return render(request, "reviews/search.html", context)
+        else:
+            k=1
+            context = {
+                "search":k
+                }
+            return render(request, "reviews/search.html", context)

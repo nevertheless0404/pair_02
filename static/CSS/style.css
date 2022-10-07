@@ -9,30 +9,33 @@ body {
     font-style: normal;
 }
 
-.star-ratings {
-    color: #aaa9a9; 
-    position: relative;
-    unicode-bidi: bidi-override;
-    width: max-content;
-    -webkit-text-fill-color: transparent; /* Will override color (regardless of order) */
-    -webkit-text-stroke-width: 1.3px;
-    -webkit-text-stroke-color: #2b2a29;
-  }
-   
-.star-ratings-fill {
-  color: #fff58c;
-  padding: 0;
-  position: absolute;
-  z-index: 1;
-  display: flex;
-  top: 0;
-  left: 0;
-  overflow: hidden;
-  -webkit-text-fill-color: gold;
+.ani_btn {
+  position: relative;
+  left: 0px;
+  display: inline-block;
+  animation: bounces .1s ease infinite alternate;
+  font-family: '-KITA-Regular', cursive;
 }
- 
-.star-ratings-base {
-  z-index: 0;
-  padding: 0;
+/* 
+.ani_btn span {
+  color: white;
+} */
+
+.ani_btn_2 {
+  position: relative;
+  top: 0px;
+  display: inline-block;
+  animation: bounce .2s ease infinite alternate;
+  font-family: '-KITA-Regular', cursive;
 }
 
+@keyframes bounce {
+  100% {
+      top: -100px;
+  }
+}
+@keyframes bounces {
+  100% {
+      left: -100px;
+  }
+}
